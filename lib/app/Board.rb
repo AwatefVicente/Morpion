@@ -10,7 +10,8 @@ class Board
 
     @board_case = Array.new(9) {|e| BoardCase.new(e)}
     @count_turn = 1
-
+  end
+  
   def play_turn(value, position)
 
     if @board_case[position] = "" 
