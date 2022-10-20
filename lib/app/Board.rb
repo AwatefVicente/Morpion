@@ -89,23 +89,35 @@ class Board
     # oh ça va, si tu veux pas de if tu fais une ternaire ;), bah en soit, tu veux juste mettre dans la case si elle est vide.
     # donc tu check si elle est ..., nop, regarde au dessus, regarde dans ton BoardCase à quoi est égal une cellule vide, yup, la c'est bon
     # Si la cellule est '' donc c'est bon, si elle est vide tu peux mettre la value du player
-  """
+
+    # . . . . . . . . .
+    # vous le voulez vraiment le .Hash
+    # x) position, c'est un ... NOMBRE :O
+    # choose c'est un ... NOMBRE :O
+    # du coup ... 
+    # alors vous vous habillez comme vous voulez
+    # concentrons nous sur le code
+
+    # go dans Game turn
+    # car position c'est ce qu'y viens de Game.turn, c'est le choix du player.
+    # choose il existe plus ici, regarde, y'a plus de choose.
+    # oui, j'ai fais la même chose dans turn directement, pour sauvegarder la mémoire.
+
+
+    """
 
   def play_turn(value, position)
     #TO DO : une méthode qui :
     #1) demande au bon joueur ce qu'il souhaite faire
     #2) change la BoardCase jouée en fonction de la valeur du joueur (X ou O)
-    choose = position.Hash["A1" = [0,0], "B1" = [1,0], "C1" = [2,0], "A2" = [0,1], "B2" = [1,1], "C2" = [2,1], "A3" = [0,2], "B3" = [1,2], "C3" = [2,2] ]
+    #choose = position.["A1" = [0,0], "B1" = [1,0], "C1" = [2,0], "A2" = [0,1], "B2" = [1,1], "C2" = [2,1], "A3" = [0,2], "B3" = [1,2], "C3" = [2,2] ]
 
-    if @board_case[choose.to_i] = "" 
-      @board_case[choose.to_i] = @value
+    if @board_case[position] = "" 
+      @board_case[position] = @value
     else
       puts "choisi une autre case"
     end
-    # le choose ici, il est égal à ... exact
-    # du coup ... tu le vois quelque part choose ?
-    # qu'est ce qui peut remplacer choose ?
-    # j'ai une urgence boulot je re dans 10min
+
   end
 
   # honnêtement, j'ai pas envie de le faire maintenant ça peux attendre ça, c'est en dernier x)
